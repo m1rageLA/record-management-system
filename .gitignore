@@ -1,0 +1,60 @@
+# Compiled object files
+*.o
+
+# Compiled binary files
+*.out
+*.exe
+
+# Debug files and folders
+*.dSYM/
+*.pdb
+*.obj
+*.dll
+*.so
+*.dylib
+
+# Build directories
+build/
+dist/
+
+# MacOS system files
+.DS_Store
+
+# Editor and OS files
+*.swp
+*~
+.vscode/
+.idea/
+
+# Makefile auto-generated dependencies
+*.d
+
+# Logs
+*.log
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Backup files
+*.bak
+*.tmp
+
+# Test output
+/test-output/
+
+# Coverage reports
+*.gcda
+*.gcno
+*.gcov
+
+# Other
+*.orig
