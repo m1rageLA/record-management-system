@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "1",
+    "author": "1",
+    "year": 1
+  },
+  {
+    "id": 4,
+    "title": "4",
+    "author": "4",
+    "year": 4
+  },
+  {
+    "id": 2,
+    "title": "Book",
+    "author": "Alex",
+    "year": 2014
+  },
+  {
+    "id": 3,
+    "title": "Bike",
+    "author": "Maksym",
+    "year": 2022
+  }
+]
