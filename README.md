@@ -2,18 +2,17 @@
 
 A command-line application in Rust that manages book records stored in MySQL. Offers full CRUD, sorting, and CSV export via a user-friendly menu.
 
-## 🗂 Project Structure
+## Project Structure
 
-```
-![Описание изображения](https://github.com/m1rageLA/record-management-system/blob/main/task/images/mysql_start.png?raw=true)
+
 
 ## 📸 Screenshots
-![MySQL Setup](https://github.com/m1rageLA/record-management-system/blob/main/task/images/mysql_start.png)
+
 All interactions take place in the terminal. See below for each step in action.
 
 | Step                          | Screenshot                                            |
 |-------------------------------|-------------------------------------------------------|
-| MySQL Setup                   | ![MySQL Setup](https://github.com/m1rageLA/record-management-system/blob/main/task/images/mysql_start.png?raw=true)           |
+| MySQL Setup                   | ![MySQL Setup](task/images/mysql_start.png)           |
 | Program Startup               | ![Program Start](task/images/program_start.png)       |
 | Add a Record                  | ![Add Item](task/images/program_add_item.png)         |
 | View All Records              | ![Show Items](task/images/program_show_items.png)     |
@@ -25,7 +24,7 @@ All interactions take place in the terminal. See below for each step in action.
 | View CSV File (in editor)     | ![CSV All](task/images/program_csv_all.png)           |
 | Exit                          | ![Exit](task/images/program_exit.png)                 |
 
-## ℹ️ Usage Flow
+## Usage Flow
 
 1. **MySQL Setup**  
    Execute `schema.sql` to create the `mylib` database and `books` table (see [MySQL Setup](task/images/mysql_start.png)).
@@ -59,6 +58,60 @@ All interactions take place in the terminal. See below for each step in action.
 
 ---
 
-Happy coding! Feel free to file issues or pull requests for enhancements.
+## OOP in Rust vs C++
 
+This project is structured with object-oriented principles in mind:
+- `Book` is a data struct representing one record.
+- Logic like `add`, `update`, `delete` is organized in separate async functions.
+- All operations use a central connection pool to interact with MySQL.
+
+**Compared to C++**: Rust uses `struct` + `impl` blocks instead of classes; memory is managed without manual `new`/`delete`, and ownership ensures safety without garbage collection.
+
+---
+
+## How to Launch the Project From Scratch
+
+1. **Install Requirements**
+
+```bash
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Install MySQL Server
+# (Mac: brew install mysql | Ubuntu: sudo apt install mysql-server)
+````
+
+2. **Clone or Download the Project**
+
+```bash
+git clone https://github.com/your_username/record-management-system.git
+cd record-management-system
 ```
+
+3. **Start MySQL and Create the Database**
+
+```bash
+mysql -u root -p
+```
+
+Then in the MySQL shell:
+
+```sql
+CREATE DATABASE mylib;
+USE mylib;
+SOURCE schema.sql;
+```
+
+4. **Set the Database URL**
+
+```bash
+export DATABASE_URL="mysql://root@localhost/mylib"
+```
+
+5. **Run the App**
+
+```bash
+cargo run
+```
+
+Use arrow keys to navigate the menu. All features are available via keyboard.
